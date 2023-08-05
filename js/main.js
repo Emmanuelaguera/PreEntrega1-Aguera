@@ -1,35 +1,25 @@
-/*let edad, numeroHijos, antiguedad, premios, salario;
+alert("Bienvenidos,lo ayudaremos en su consulta.");
 
-edad= parseInt(prompt("ingresar edad:"));
-numeroHijos= parseInt(prompt("\n ingresar numero de hijos:"));
-antiguedad= parseInt(prompt("\n ingresar antiguedad:"));
-salario= parseInt(prompt("\n ingresar salario actual:"));
-premios= parseInt(prompt("\n ingresar numeros de premios"));
+const productos = [
+    { nombre: "The Last Of As", precioProducto: 2500 },
+    { nombre: "Diablo 4", precioProducto: 3500 },
+    { nombre: "apex Legend", precioProducto: 1800 },
+    { nombre: "Metal Gear Solid", precioProducto: 4000 },
 
+];
+let carrito = []
+let seleccion = prompt("Desea comprar algun juego si o no");
 
-if(premios > 3 && antiguedad > 5 ){
-    salario = salario + ( salario * 0.18 );
-    
-
-}else if(numeroHijos > 3 && edad > 45){
-    salario = salario + ( salario * 0.14 );
-   
-}else if(salario < 650000){
-    salario = salario + ( salario * 0.1 );
-    
+while (seleccion != "si" && seleccion != "no") {
+    alert("Ingrese si o no")
+    seleccion = prompt("desea comprar un juego si o no")
 }
-console.log ("\n El nuevo salario es de:" + salario);*/
 
-/*let i = 0;
-
-let n = 0;
-while (i < 5) {
-    i++
-    if (i === 3) { continue; }
-    n += i;
-    console.log(n);
-}*/
-// 1,3,7,12
+if (seleccion == "si") {
+    alert("Lista de nuestros juegos")
+    let todosLosProductos = productos.map((productos) => productos.nombre + "" + productos.precioProducto + "$");
+}
+console.log(productos);
 
 function calcularCostoTotal() {
     const cantidadDeProductos = parseInt(prompt("Ingrese la cantidad de productos:"));
@@ -51,7 +41,8 @@ function calcularCostoTotal() {
     }
     alert("El costo total es de: $${costoTotal.toFixed (2)}");
 }
-calcularCostoTotal();
+calcularCostoTotal("productos+precioProducto");
+
 
 
 
